@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main(int argc, char** argv) {
+	int datos[10];
+	int temp;
+for(int i=0;i<=9;i++){ 
+					printf("Introduce el valor %d: \n", i+1); //pide los elementos
+					scanf("%d",&datos[i]);
+				}
+   printf("El elemento mayor es:\n"); //metodo de la borbuja
+				for (int i=0; i<9; i++) {
+				   for (int j=i+1; j<10; j++){
+				   	if (datos[i]>datos[j]){
+				   		temp=datos[i];
+				   		datos[i]=datos[j];
+				   		datos[j]=temp;
+					   }
+				   }
+				}
+   printf("Los numeros ordenados son:\n");
+				for(int i=0; i<10; i++){
+				printf("%i ", datos[i]);
+				}
+				printf("\n");
+				system("pause");
+        	return 0;
+}
